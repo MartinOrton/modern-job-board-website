@@ -1,0 +1,633 @@
+<!-- 
+  MODERN JOB BOARD - GUTENBERG HOMEPAGE BLOCKS
+  
+  Instructions:
+  1. Open your WordPress page editor (Gutenberg) for the Home page.
+  2. Click the three dots in the top-right corner of the editor and select "Code Editor".
+  3. Paste the contents of this file into the editor.
+  4. Switch back to the "Visual Editor" by clicking the three dots again.
+  5. Save/Update the page.
+-->
+
+<!-- wp:group {"tagName":"section","align":"full","className":"hero section","layout":{"type":"constrained"}} -->
+<section class="wp-block-group alignfull hero section">
+    <div class="container hero-grid">
+        
+        <!-- Hero Left Side Content -->
+        <div class="hero-content">
+            <!-- wp:group {"className":"reveal","layout":{"type":"constrained"}} -->
+            <div class="wp-block-group reveal">
+                <!-- wp:paragraph {"className":"badge"} -->
+                <p class="badge"><span class="badge-dot"></span>WordPress Plugin • v0.9.0-beta.1</p>
+                <!-- /wp:paragraph -->
+            </div>
+            <!-- /wp:group -->
+
+            <!-- wp:group {"className":"reveal delay-1","layout":{"type":"constrained"}} -->
+            <div class="wp-block-group reveal delay-1">
+                <!-- wp:heading {"level":1,"className":"hero-title"} -->
+                <h1 class="wp-block-heading hero-title">The freemium job board plugin <span class="italic-highlight">for WordPress</span></h1>
+                <!-- /wp:heading -->
+            </div>
+            <!-- /wp:group -->
+
+            <!-- wp:group {"className":"reveal delay-2","layout":{"type":"constrained"}} -->
+            <div class="wp-block-group reveal delay-2">
+                <!-- wp:paragraph {"className":"hero-text"} -->
+                <p class="hero-text">Stop renting a SaaS job board. Run a professional board on your WordPress site — listing data stays on your server, with a free tier to start and paid plans for monetization and integrations.</p>
+                <!-- /wp:paragraph -->
+            </div>
+            <!-- /wp:group -->
+
+            <!-- wp:group {"className":"reveal delay-3","layout":{"type":"constrained"}} -->
+            <div class="wp-block-group reveal delay-3">
+                <!-- wp:html -->
+                <div class="hero-actions">
+                    <a href="#pricing" class="btn btn-primary btn-lg">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" x2="12" y1="15" y2="3"/></svg>
+                        Get Started Free
+                    </a>
+                    <a href="/docs/" class="btn btn-outline btn-lg">
+                        Read the Docs
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
+                    </a>
+                </div>
+                <!-- /wp:html -->
+            </div>
+            <!-- /wp:group -->
+        </div>
+
+        <!-- Hero Right Side Visual Showcase -->
+        <!-- wp:group {"className":"hero-visual","layout":{"type":"constrained"}} -->
+        <div class="wp-block-group hero-visual">
+            
+            <!-- wp:group {"className":"hero-card reveal delay-2","layout":{"type":"constrained"}} -->
+            <div class="wp-block-group hero-card reveal delay-2">
+                <!-- wp:html -->
+                <div class="card-header">
+                    <div class="company-logo">AC</div>
+                    <div class="company-info">
+                        <h4>Acme Corporation</h4>
+                        <p>Technology • San Francisco</p>
+                    </div>
+                    <span class="badge-accent">Featured</span>
+                </div>
+                <!-- /wp:html -->
+
+                <!-- wp:html -->
+                <div class="card-stats">
+                    <div class="stat-item">
+                        <div class="stat-val">12</div>
+                        <div class="stat-lbl">Active Jobs</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-val">48</div>
+                        <div class="stat-lbl">Applications</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-val">3.2k</div>
+                        <div class="stat-lbl">Views</div>
+                    </div>
+                </div>
+                <!-- /wp:html -->
+
+                <!-- wp:html -->
+                <div class="job-list">
+                    <!-- Job 1 -->
+                    <div class="job-item">
+                        <div class="job-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="14" x="2" y="7" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+                        </div>
+                        <div class="job-info">
+                            <h5>Senior Frontend Developer</h5>
+                            <p>$120k – $150k • Remote</p>
+                        </div>
+                        <div class="job-meta">
+                            <div class="social-share">
+                                <button class="share-btn twitter" aria-label="Share on Twitter"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></button>
+                                <button class="share-btn linkedin" aria-label="Share on LinkedIn"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 0 1 2.063-2.063 2.063 2.063 0 0 1 2.064 2.063 2.065 2.065 0 0 1-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></button>
+                            </div>
+                            <span class="job-tag">Full-time</span>
+                        </div>
+                    </div>
+                    <!-- Job 2 -->
+                    <div class="job-item">
+                        <div class="job-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" x2="18" y1="20" y2="10"/><line x1="12" x2="12" y1="20" y2="4"/><line x1="6" x2="6" y1="20" y2="14"/></svg>
+                        </div>
+                        <div class="job-info">
+                            <h5>Product Manager</h5>
+                            <p>$130k – $160k • Hybrid</p>
+                        </div>
+                        <div class="job-meta">
+                            <div class="social-share">
+                                <button class="share-btn twitter" aria-label="Share on Twitter"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></button>
+                                <button class="share-btn linkedin" aria-label="Share on LinkedIn"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 0 1 2.063-2.063 2.063 2.063 0 0 1 2.064 2.063 2.065 2.065 0 0 1-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></button>
+                            </div>
+                            <span class="job-tag">Full-time</span>
+                        </div>
+                    </div>
+                    <!-- Job 3 -->
+                    <div class="job-item">
+                        <div class="job-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="13.5" cy="6.5" r=".5" fill="currentColor"/><circle cx="17.5" cy="10.5" r=".5" fill="currentColor"/><circle cx="8.5" cy="7.5" r=".5" fill="currentColor"/><circle cx="6.5" cy="12.5" r=".5" fill="currentColor"/><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c.926 0 1.648-.746 1.648-1.688 0-.437-.18-.835-.437-1.125-.29-.289-.438-.652-.438-1.087 0-.875.75-1.562 1.687-1.562H15.75A6.25 6.25 0 0 0 22 10.25c0-4.563-4.438-8.25-10-8.25z"/></svg>
+                        </div>
+                        <div class="job-info">
+                            <h5>UX Designer</h5>
+                            <p>$90k – $110k • On-site</p>
+                        </div>
+                        <div class="job-meta">
+                            <div class="social-share">
+                                <button class="share-btn twitter" aria-label="Share on Twitter"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></button>
+                                <button class="share-btn linkedin" aria-label="Share on LinkedIn"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 0 1 2.063-2.063 2.063 2.063 0 0 1 2.064 2.063 2.065 2.065 0 0 1-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></button>
+                            </div>
+                            <span class="job-tag">Contract</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- /wp:html -->
+            </div>
+            <!-- /wp:group -->
+
+            <!-- wp:html -->
+            <div class="hero-bg-accents">
+                <div class="bg-accent-1"></div>
+                <div class="bg-accent-2"></div>
+            </div>
+            <!-- /wp:html -->
+        </div>
+        <!-- /wp:group -->
+
+    </div>
+</section>
+<!-- /wp:group -->
+
+<!-- wp:group {"tagName":"section","align":"full","className":"section stats-section","layout":{"type":"constrained"}} -->
+<section class="wp-block-group alignfull section stats-section">
+    <div class="container stats-grid">
+        <!-- wp:group {"className":"stat-block reveal","layout":{"type":"constrained"}} -->
+        <div class="wp-block-group stat-block reveal">
+            <!-- wp:heading {"level":3} -->
+            <h3 class="wp-block-heading">100%</h3>
+            <!-- /wp:heading -->
+            <!-- wp:paragraph -->
+            <p>Listing data stays with you</p>
+            <!-- /wp:paragraph -->
+        </div>
+        <!-- /wp:group -->
+
+        <!-- wp:group {"className":"stat-block reveal delay-1","layout":{"type":"constrained"}} -->
+        <div class="wp-block-group stat-block reveal delay-1">
+            <!-- wp:heading {"level":3} -->
+            <h3 class="wp-block-heading">$0</h3>
+            <!-- /wp:heading -->
+            <!-- wp:paragraph -->
+            <p>Monthly Fees</p>
+            <!-- /wp:paragraph -->
+        </div>
+        <!-- /wp:group -->
+
+        <!-- wp:group {"className":"stat-block reveal delay-2","layout":{"type":"constrained"}} -->
+        <div class="wp-block-group stat-block reveal delay-2">
+            <!-- wp:heading {"level":3} -->
+            <h3 class="wp-block-heading">6+</h3>
+            <!-- /wp:heading -->
+            <!-- wp:paragraph -->
+            <p>Ready Shortcodes</p>
+            <!-- /wp:paragraph -->
+        </div>
+        <!-- /wp:group -->
+
+        <!-- wp:group {"className":"stat-block reveal delay-3","layout":{"type":"constrained"}} -->
+        <div class="wp-block-group stat-block reveal delay-3">
+            <!-- wp:heading {"level":3} -->
+            <h3 class="wp-block-heading">∞</h3>
+            <!-- /wp:heading -->
+            <!-- wp:paragraph -->
+            <p>Customization</p>
+            <!-- /wp:paragraph -->
+        </div>
+        <!-- /wp:group -->
+    </div>
+</section>
+<!-- /wp:group -->
+
+<!-- wp:group {"tagName":"section","align":"full","className":"section bg-neutral","layout":{"type":"constrained"}} -->
+<section id="features" class="wp-block-group alignfull section bg-neutral">
+    <div class="container">
+        
+        <!-- wp:group {"className":"section-header reveal","layout":{"type":"constrained"}} -->
+        <div class="wp-block-group section-header reveal">
+            <!-- wp:paragraph {"className":"eyebrow"} -->
+            <p class="eyebrow">Features</p>
+            <!-- /wp:paragraph -->
+            <!-- wp:heading {"level":2} -->
+            <h2 class="wp-block-heading">Everything you need to run a job board</h2>
+            <!-- /wp:heading -->
+            <!-- wp:paragraph -->
+            <p>From job posting to monetization, Modern Job Board handles it all while giving you complete control.</p>
+            <!-- /wp:paragraph -->
+        </div>
+        <!-- /wp:group -->
+
+        <div class="features-grid">
+            <!-- Feature Item 1 -->
+            <!-- wp:group {"className":"feature-card reveal","layout":{"type":"constrained"}} -->
+            <div class="wp-block-group feature-card reveal">
+                <!-- wp:html -->
+                <div class="feature-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="8" height="4" x="8" y="2" rx="1" ry="1" /><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2" /><path d="M12 11h4" /><path d="M12 16h4" /><path d="M8 11h.01" /><path d="M8 16h.01" /></svg></div>
+                <!-- /wp:html -->
+                <!-- wp:heading {"level":3} -->
+                <h3 class="wp-block-heading">Frontend Job Submission</h3>
+                <!-- /wp:heading -->
+                <!-- wp:paragraph -->
+                <p>Employers post jobs directly from your site with an intuitive form. Supports custom fields, application methods, and company profiles.</p>
+                <!-- /wp:paragraph -->
+            </div>
+            <!-- /wp:group -->
+
+            <!-- Feature Item 2 -->
+            <!-- wp:group {"className":"feature-card reveal delay-1","layout":{"type":"constrained"}} -->
+            <div class="wp-block-group feature-card reveal delay-1">
+                <!-- wp:html -->
+                <div class="feature-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8" /><path d="m21 21-4.3-4.3" /></svg></div>
+                <!-- /wp:html -->
+                <!-- wp:heading {"level":3} -->
+                <h3 class="wp-block-heading">AJAX Filtering</h3>
+                <!-- /wp:heading -->
+                <!-- wp:paragraph -->
+                <p>Lightning-fast job search with filters for keywords, location, category, and job type. No page reloads needed.</p>
+                <!-- /wp:paragraph -->
+            </div>
+            <!-- /wp:group -->
+
+            <!-- Feature Item 3 -->
+            <!-- wp:group {"className":"feature-card reveal delay-2","layout":{"type":"constrained"}} -->
+            <div class="wp-block-group feature-card reveal delay-2">
+                <!-- wp:html -->
+                <div class="feature-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" /><circle cx="9" cy="7" r="4" /><path d="M22 21v-2a4 4 0 0 0-3-3.87" /><path d="M16 3.13a4 4 0 0 1 0 7.75" /></svg></div>
+                <!-- /wp:html -->
+                <!-- wp:heading {"level":3} -->
+                <h3 class="wp-block-heading">Candidate System</h3>
+                <!-- /wp:heading -->
+                <!-- wp:paragraph -->
+                <p>Complete candidate management with profiles, secure resume storage, and one-click applications using stored CVs.</p>
+                <!-- /wp:paragraph -->
+            </div>
+            <!-- /wp:group -->
+
+            <!-- Feature Item 4 -->
+            <!-- wp:group {"className":"feature-card reveal","layout":{"type":"constrained"}} -->
+            <div class="wp-block-group feature-card reveal">
+                <!-- wp:html -->
+                <div class="feature-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" x2="12" y1="2" y2="22" /><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" /></svg></div>
+                <!-- /wp:html -->
+                <!-- wp:heading {"level":3} -->
+                <h3 class="wp-block-heading">Flexible Pricing Tiers via WooCommerce</h3>
+                <!-- /wp:heading -->
+                <!-- wp:paragraph -->
+                <p>Create your own employer pricing models: one-time pay-per-post, bulk job credit packages (Starter / Business / Enterprise tiers), single CV unlocks, or time-based unlimited access passes. Employers see live credit balances in their dashboard. Full refund/expiry lifecycle handling included.</p>
+                <!-- /wp:paragraph -->
+            </div>
+            <!-- /wp:group -->
+
+            <!-- Feature Item 5 -->
+            <!-- wp:group {"className":"feature-card reveal delay-1","layout":{"type":"constrained"}} -->
+            <div class="wp-block-group feature-card reveal delay-1">
+                <!-- wp:html -->
+                <div class="feature-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="3 6 9 3 15 6 21 3 21 18 15 21 9 18 3 21" /><line x1="9" x2="9" y1="3" y2="18" /><line x1="15" x2="15" y1="6" y2="21" /></svg></div>
+                <!-- /wp:html -->
+                <!-- wp:heading {"level":3} -->
+                <h3 class="wp-block-heading">Google Maps Integration</h3>
+                <!-- /wp:heading -->
+                <!-- wp:paragraph -->
+                <p>Visual location display on job pages helps candidates understand where opportunities are located.</p>
+                <!-- /wp:paragraph -->
+            </div>
+            <!-- /wp:group -->
+
+            <!-- Feature Item 6 -->
+            <!-- wp:group {"className":"feature-card reveal delay-2","layout":{"type":"constrained"}} -->
+            <div class="wp-block-group feature-card reveal delay-2">
+                <!-- wp:html -->
+                <div class="feature-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17" /><polyline points="16 7 22 7 22 13" /></svg></div>
+                <!-- /wp:html -->
+                <!-- wp:heading {"level":3} -->
+                <h3 class="wp-block-heading">SEO Ready</h3>
+                <!-- /wp:heading -->
+                <!-- wp:paragraph -->
+                <p>Automatic Schema.org JobPosting structured data for optimal visibility in Google for Jobs results.</p>
+                <!-- /wp:paragraph -->
+            </div>
+            <!-- /wp:group -->
+
+            <!-- Feature Item 7 -->
+            <!-- wp:group {"className":"feature-card reveal","layout":{"type":"constrained"}} -->
+            <div class="wp-block-group feature-card reveal">
+                <!-- wp:html -->
+                <div class="feature-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10" /><polyline points="12 6 12 12 16 14" /></svg></div>
+                <!-- /wp:html -->
+                <!-- wp:heading {"level":3} -->
+                <h3 class="wp-block-heading">Auto Expiration</h3>
+                <!-- /wp:heading -->
+                <!-- wp:paragraph -->
+                <p>Jobs automatically expire after your configured duration. Background cron jobs handle cleanup automatically.</p>
+                <!-- /wp:paragraph -->
+            </div>
+            <!-- /wp:group -->
+
+            <!-- Feature Item 8 -->
+            <!-- wp:group {"className":"feature-card reveal delay-1","layout":{"type":"constrained"}} -->
+            <div class="wp-block-group feature-card reveal delay-1">
+                <!-- wp:html -->
+                <div class="feature-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z" /></svg></div>
+                <!-- /wp:html -->
+                <!-- wp:heading {"level":3} -->
+                <h3 class="wp-block-heading">Custom Fields Builder</h3>
+                <!-- /wp:heading -->
+                <!-- wp:paragraph -->
+                <p>Create unlimited custom fields for jobs and applications through a simple admin UI. No code required.</p>
+                <!-- /wp:paragraph -->
+            </div>
+            <!-- /wp:group -->
+
+            <!-- Feature Item 9 -->
+            <!-- wp:group {"className":"feature-card reveal delay-2","layout":{"type":"constrained"}} -->
+            <div class="wp-block-group feature-card reveal delay-2">
+                <!-- wp:html -->
+                <div class="feature-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 14.899A7 7 0 1 1 15.71 8h1.79a4.5 4.5 0 0 1 2.5 8.242" /><path d="M12 12v9" /><path d="m16 16-4-4-4 4" /></svg></div>
+                <!-- /wp:html -->
+                <!-- wp:heading {"level":3} -->
+                <h3 class="wp-block-heading">CSV Import/Export</h3>
+                <!-- /wp:heading -->
+                <!-- wp:paragraph -->
+                <p>Bulk import job listings or export your data for analysis. Perfect for migrations and reporting.</p>
+                <!-- /wp:paragraph -->
+            </div>
+            <!-- /wp:group -->
+        </div>
+    </div>
+</section>
+<!-- /wp:group -->
+
+<!-- wp:group {"tagName":"section","align":"full","className":"section","layout":{"type":"constrained"}} -->
+<section id="comparison" class="wp-block-group alignfull section">
+    <div class="container">
+        
+        <!-- wp:group {"className":"section-header reveal","layout":{"type":"constrained"}} -->
+        <div class="wp-block-group section-header reveal">
+            <!-- wp:paragraph {"className":"eyebrow"} -->
+            <p class="eyebrow">Compare</p>
+            <!-- /wp:paragraph -->
+            <!-- wp:heading {"level":2} -->
+            <h2 class="wp-block-heading">Why choose a plugin over SaaS?</h2>
+            <!-- /wp:heading -->
+            <!-- wp:paragraph -->
+            <p>See how Modern Job Board stacks up against typical SaaS job board platforms.</p>
+            <!-- /wp:paragraph -->
+        </div>
+        <!-- /wp:group -->
+
+        <!-- wp:group {"className":"comparison-table-wrapper reveal delay-1","layout":{"type":"constrained"}} -->
+        <div class="wp-block-group comparison-table-wrapper reveal delay-1">
+            <!-- wp:html -->
+            <div class="comparison-table">
+                <div class="row header-row">
+                    <div class="col feature">Feature</div>
+                    <div class="col mjb">Modern Job Board</div>
+                    <div class="col saas">SaaS Platforms</div>
+                </div>
+                <div class="row">
+                    <div class="col feature">Cost Model</div>
+                    <div class="col mjb highlight"><svg class="icon-check" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12" /></svg> One-time / Free</div>
+                    <div class="col saas"><svg class="icon-minus" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" x2="19" y1="12" y2="12" /></svg> Monthly subscription</div>
+                </div>
+                <div class="row">
+                    <div class="col feature">Listing data stays with you</div>
+                    <div class="col mjb highlight"><svg class="icon-check" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12" /></svg> On your WordPress site</div>
+                    <div class="col saas"><svg class="icon-minus" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" x2="19" y1="12" y2="12" /></svg> Hosted on their servers</div>
+                </div>
+                <div class="row">
+                    <div class="col feature">Customization</div>
+                    <div class="col mjb highlight"><svg class="icon-check" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12" /></svg> Themes, hooks & WP ecosystem</div>
+                    <div class="col saas"><svg class="icon-minus" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" x2="19" y1="12" y2="12" /></svg> Limited to settings</div>
+                </div>
+            </div>
+            <!-- /wp:html -->
+        </div>
+        <!-- /wp:group -->
+
+    </div>
+</section>
+<!-- /wp:group -->
+
+<!-- wp:group {"tagName":"section","align":"full","className":"section bg-white","layout":{"type":"constrained"}} -->
+<section id="developers" class="wp-block-group alignfull section bg-white">
+    <div class="container">
+        
+        <!-- wp:group {"className":"section-header reveal","layout":{"type":"constrained"}} -->
+        <div class="wp-block-group section-header reveal">
+            <!-- wp:paragraph {"className":"eyebrow"} -->
+            <p class="eyebrow">Developers</p>
+            <!-- /wp:paragraph -->
+            <!-- wp:heading {"level":2} -->
+            <h2 class="wp-block-heading">Built for extensibility</h2>
+            <!-- /wp:heading -->
+            <!-- wp:paragraph -->
+            <p>REST API, XML feeds, and extensive hooks make integration straightforward.</p>
+            <!-- /wp:paragraph -->
+        </div>
+        <!-- /wp:group -->
+
+        <div class="dev-grid">
+            <!-- Left Side Developer Content Items -->
+            <div class="dev-content">
+                <!-- wp:group {"className":"dev-item reveal","layout":{"type":"constrained"}} -->
+                <div class="wp-block-group dev-item reveal">
+                    <!-- wp:heading {"level":3} -->
+                    <h3 class="wp-block-heading">REST API</h3>
+                    <!-- /wp:heading -->
+                    <!-- wp:paragraph -->
+                    <p>Access job listings programmatically with the built-in JSON API. Perfect for mobile apps, external integrations, or headless WordPress setups.</p>
+                    <!-- /wp:paragraph -->
+                </div>
+                <!-- /wp:group -->
+
+                <!-- wp:group {"className":"dev-item reveal delay-1","layout":{"type":"constrained"}} -->
+                <div class="wp-block-group dev-item reveal delay-1">
+                    <!-- wp:heading {"level":3} -->
+                    <h3 class="wp-block-heading">XML Job Feed</h3>
+                    <!-- /wp:heading -->
+                    <!-- wp:paragraph -->
+                    <p>Syndicate your listings to Indeed, Google Jobs, and other aggregators with the standardized feed at <code class="inline-code">/feed/job-listings</code></p>
+                    <!-- /wp:paragraph -->
+                </div>
+                <!-- /wp:group -->
+
+                <!-- wp:group {"className":"dev-item reveal delay-2","layout":{"type":"constrained"}} -->
+                <div class="wp-block-group dev-item reveal delay-2">
+                    <!-- wp:heading {"level":3} -->
+                    <h3 class="wp-block-heading">Actions & Filters</h3>
+                    <!-- /wp:heading -->
+                    <!-- wp:paragraph -->
+                    <p>Dozens of hooks let you customize job queries, form submissions, email notifications, and more without touching core plugin files.</p>
+                    <!-- /wp:paragraph -->
+                </div>
+                <!-- /wp:group -->
+            </div>
+
+            <!-- Right Side Code Showcase Window -->
+            <!-- wp:group {"className":"dev-code reveal delay-2","layout":{"type":"constrained"}} -->
+            <div class="wp-block-group dev-code reveal delay-2">
+                <!-- wp:html -->
+                <div class="code-window">
+                    <div class="window-controls">
+                        <span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span>
+                    </div>
+                    <pre><code><span class="comment">// REST API Endpoint</span>
+GET /wp-json/mjb/v1/jobs
+
+<span class="comment">// Response</span>
+[
+  <span class="key">"id"</span>: <span class="number">123</span>,
+  <span class="key">"title"</span>: <span class="string">"Senior Developer"</span>,
+  <span class="key">"company"</span>: <span class="string">"Acme Inc"</span>,
+  <span class="key">"location"</span>: <span class="string">"Remote"</span>
+]
+
+<span class="comment">// Filter job queries</span>
+<span class="func">add_filter</span>(<span class="string">'mjb_job_query'</span>, <span class="keyword">function</span>($args) {
+  $args[<span class="string">'orderby'</span>] = <span class="string">'rand'</span>;
+  <span class="keyword">return</span> $args;
+});</code></pre>
+                </div>
+                <!-- /wp:html -->
+            </div>
+            <!-- /wp:group -->
+        </div>
+
+    </div>
+</section>
+<!-- /wp:group -->
+
+<!-- wp:group {"tagName":"section","align":"full","className":"section bg-neutral","layout":{"type":"constrained"}} -->
+<section id="pricing" class="wp-block-group alignfull section bg-neutral">
+    <div class="container">
+        
+        <!-- wp:group {"className":"section-header reveal","layout":{"type":"constrained"}} -->
+        <div class="wp-block-group section-header reveal">
+            <!-- wp:paragraph {"className":"eyebrow"} -->
+            <p class="eyebrow">Pricing</p>
+            <!-- /wp:paragraph -->
+            <!-- wp:heading {"level":2} -->
+            <h2 class="wp-block-heading">Start free, upgrade when you need more</h2>
+            <!-- /wp:heading -->
+            <!-- wp:paragraph -->
+            <p>A generous free tier to launch your board. Unlock monetization, imports, and integrations with paid plans — no SaaS lock-in.</p>
+            <!-- /wp:paragraph -->
+        </div>
+        <!-- /wp:group -->
+
+        <div class="pricing-grid">
+            <!-- Free Plan -->
+            <!-- wp:group {"className":"pricing-card reveal delay-1","layout":{"type":"constrained"}} -->
+            <div class="wp-block-group pricing-card reveal delay-1">
+                <!-- wp:heading {"level":3} -->
+                <h3 class="wp-block-heading">Free</h3>
+                <!-- /wp:heading -->
+                <!-- wp:paragraph {"className":"price-sub"} -->
+                <p class="price-sub">Core job board features to get started</p>
+                <!-- /wp:paragraph -->
+                <!-- wp:paragraph {"className":"price"} -->
+                <p class="price">$0</p>
+                <!-- /wp:paragraph -->
+                <!-- wp:html -->
+                <ul class="price-features">
+                    <li><span class="check-icon">✓</span> Job listings with AJAX search</li>
+                    <li><span class="check-icon">✓</span> Applications &amp; employer/candidate dashboards</li>
+                    <li><span class="check-icon">✓</span> Gutenberg blocks &amp; shortcodes</li>
+                    <li><span class="check-icon">✓</span> Schema.org JobPosting SEO</li>
+                    <li><span class="check-icon">✓</span> Community support</li>
+                </ul>
+                <a href="mailto:hello@martinorton.com?subject=Modern%20Job%20Board%20Free" class="btn btn-outline btn-block">Get Started Free</a>
+                <!-- /wp:html -->
+            </div>
+            <!-- /wp:group -->
+
+            <!-- Pro Plan -->
+            <!-- wp:group {"className":"pricing-card pro reveal delay-2","layout":{"type":"constrained"}} -->
+            <div class="wp-block-group pricing-card pro reveal delay-2">
+                <!-- wp:html -->
+                <div class="recommended-badge">Recommended</div>
+                <!-- /wp:html -->
+                <!-- wp:heading {"level":3} -->
+                <h3 class="wp-block-heading">Pro</h3>
+                <!-- /wp:heading -->
+                <!-- wp:paragraph {"className":"price-sub"} -->
+                <p class="price-sub">Monetization and scale for growing boards</p>
+                <!-- /wp:paragraph -->
+                <!-- wp:paragraph {"className":"price"} -->
+                <p class="price">$149 <span class="period">/year</span></p>
+                <!-- /wp:paragraph -->
+                <!-- wp:html -->
+                <ul class="price-features">
+                    <li><span class="check-icon">✓</span> Everything in Free</li>
+                    <li><span class="check-icon">✓</span> Unlimited active jobs</li>
+                    <li><span class="check-icon">✓</span> WooCommerce monetization (you keep 100% revenue)</li>
+                    <li><span class="check-icon">✓</span> Custom fields builder</li>
+                    <li><span class="check-icon">✓</span> CSV &amp; XML import/export</li>
+                    <li><span class="check-icon">✓</span> Email support</li>
+                </ul>
+                <a href="mailto:hello@martinorton.com?subject=Modern%20Job%20Board%20Pro" class="btn btn-primary btn-block">Get Pro</a>
+                <!-- /wp:html -->
+            </div>
+            <!-- /wp:group -->
+
+            <!-- Business Plan -->
+            <!-- wp:group {"className":"pricing-card reveal delay-3","layout":{"type":"constrained"}} -->
+            <div class="wp-block-group pricing-card reveal delay-3">
+                <!-- wp:heading {"level":3} -->
+                <h3 class="wp-block-heading">Business</h3>
+                <!-- /wp:heading -->
+                <!-- wp:paragraph {"className":"price-sub"} -->
+                <p class="price-sub">Integrations and priority support</p>
+                <!-- /wp:paragraph -->
+                <!-- wp:paragraph {"className":"price"} -->
+                <p class="price">$299 <span class="period">/year</span></p>
+                <!-- /wp:paragraph -->
+                <!-- wp:html -->
+                <ul class="price-features">
+                    <li><span class="check-icon">✓</span> Everything in Pro</li>
+                    <li><span class="check-icon">✓</span> REST API (v1 + authenticated v2)</li>
+                    <li><span class="check-icon">✓</span> XML job feed syndication</li>
+                    <li><span class="check-icon">✓</span> Webhooks with retry queue</li>
+                    <li><span class="check-icon">✓</span> Priority support &amp; 2 hrs custom dev</li>
+                </ul>
+                <a href="mailto:hello@martinorton.com?subject=Modern%20Job%20Board%20Business" class="btn btn-outline btn-block">Get Business</a>
+                <!-- /wp:html -->
+            </div>
+            <!-- /wp:group -->
+        </div>
+
+    </div>
+</section>
+<!-- /wp:group -->
+
+<!-- wp:group {"tagName":"section","align":"full","className":"cta-section","layout":{"type":"constrained"}} -->
+<section class="wp-block-group alignfull cta-section">
+    <div class="container reveal">
+        <!-- wp:heading {"level":2} -->
+        <h2 class="wp-block-heading">Ready to launch your job board?</h2>
+        <!-- /wp:heading -->
+        <!-- wp:paragraph -->
+        <p>Start with the free tier today and upgrade when you need monetization, imports, or API integrations.</p>
+        <!-- /wp:paragraph -->
+        <!-- wp:html -->
+        <a href="#pricing" class="btn btn-white btn-lg">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
+            View Pricing
+        </a>
+        <!-- /wp:html -->
+    </div>
+</section>
+<!-- /wp:group -->

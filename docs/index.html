@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documentation – Modern Job Board</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+
+<body>
+    <nav class="navbar scrolled" id="navbar">
+        <div class="container navbar-content">
+            <a href="../index.html" class="logo">
+                <div class="logo-icon">
+                    <img src="../images/MJB%20logo.svg" alt="MJB Logo" />
+                </div>
+            </a>
+            <div class="nav-links desktop-only">
+                <a href="../index.html#features">Features</a>
+                <a href="index.html" class="active">Docs</a>
+                <a href="/jobs/" data-demo-path="/jobs/" target="_blank" rel="noopener noreferrer">Live Demo</a>
+                <a href="../index.html#pricing" class="btn btn-primary btn-sm">Get Started</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="docs-page">
+        <section class="section">
+            <div class="container docs-container">
+                <header class="docs-header">
+                    <span class="eyebrow">Documentation</span>
+                    <h1>Modern Job Board v0.9.0-beta.1</h1>
+                    <p>Install the plugin, create frontend pages, and extend it with blocks, shortcodes, REST, and webhooks.</p>
+                </header>
+
+                <div class="docs-grid">
+                    <article class="docs-card">
+                        <h2>Quick start</h2>
+                        <ol class="docs-list">
+                            <li>Upload and activate the plugin.</li>
+                            <li>Open <strong>Modern Job Board → Setup</strong> and create missing pages.</li>
+                            <li>Configure <strong>Settings</strong> for listings, security, and integrations.</li>
+                            <li>Post a test job and submit a test application.</li>
+                        </ol>
+                    </article>
+
+                    <article class="docs-card">
+                        <h2>Shortcodes & blocks</h2>
+                        <ul class="docs-list">
+                            <li><code>[mjb_jobs]</code> — searchable listings</li>
+                            <li><code>[mjb_job_form]</code> — employer submission form</li>
+                            <li><code>[mjb_dashboard]</code> — employer dashboard</li>
+                            <li><code>[mjb_candidate_dashboard]</code> — candidate profile</li>
+                            <li><code>[mjb_employer_registration]</code> / <code>[mjb_candidate_registration]</code></li>
+                        </ul>
+                        <p>All shortcodes are also available as Gutenberg blocks under <strong>Modern Job Board</strong>.</p>
+                    </article>
+
+                    <article class="docs-card">
+                        <h2>REST API</h2>
+                        <p>Public search:</p>
+                        <pre class="docs-code">GET /wp-json/mjb/v1/jobs/search/in/remote/category/engineering/type/full-time/</pre>
+                        <p>Authenticated employer/candidate endpoints live under <code>/wp-json/mjb/v2/</code>. REST API access requires the <strong>Business</strong> plan.</p>
+                    </article>
+
+                    <article class="docs-card">
+                        <h2>Local demo</h2>
+                        <p>Sync and seed the bundled local WordPress install:</p>
+                        <pre class="docs-code">.\bin\sync-local-test.ps1
+php bin\seed-demo.php "C:\Users\marti\4Mation Digital\mjb-local-test"</pre>
+                        <p>Then open the demo site:</p>
+                        <p><a href="/jobs/" data-demo-path="/jobs/" class="btn btn-outline btn-sm">Browse demo jobs</a></p>
+                    </article>
+
+                    <article class="docs-card">
+                        <h2>Feeds & webhooks</h2>
+                        <ul class="docs-list">
+                            <li>XML feed: <code>/feed/job-listings</code></li>
+                            <li>Webhook events: <code>application.submitted</code>, <code>application.status_updated</code>, <code>job.submitted</code></li>
+                            <li>Optional HMAC signing via <code>X-MJB-Signature</code></li>
+                        </ul>
+                    </article>
+
+                    <article class="docs-card">
+                        <h2>Plans &amp; licensing</h2>
+                        <p>Modern Job Board is a <strong>proprietary freemium</strong> plugin. Start free, then upgrade for monetization, imports, and API features — or choose Complete Site for a done-for-you build.</p>
+                        <ul class="docs-list">
+                            <li><strong>Free</strong> — up to 10 active jobs, core board, community support</li>
+                            <li><strong>Pro</strong> — unlimited jobs, WooCommerce, custom fields, import/export</li>
+                            <li><strong>Business</strong> — REST API, XML feeds, webhooks, priority support</li>
+                            <li><strong>Complete Site</strong> — full site build + Business included for year one</li>
+                        </ul>
+                        <p><a href="../index.html#pricing" class="btn btn-outline btn-sm">View pricing</a></p>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container footer-content">
+            <div class="footer-brand">
+                <div class="logo-icon sm">
+                    <img src="../images/MJB%20logo.svg" alt="MJB Logo" />
+                </div>
+            </div>
+            <div class="footer-links">
+                <a href="../index.html#pricing">Pricing</a>
+                <a href="index.html">Documentation</a>
+                <a href="https://martinorton.com">Author</a>
+            </div>
+            <div class="footer-copy">Copyright © 2026 Modern Job Board.</div>
+        </div>
+    </footer>
+
+    <script src="../js/script.js"></script>
+</body>
+
+</html>
