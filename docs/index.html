@@ -4,103 +4,695 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Documentation – Modern Job Board</title>
+    <title>Documentation - Modern Job Board</title>
+    <meta name="description" content="Reference guide for Modern Job Board: install, shortcodes, REST API, webhooks, feeds, and deploy notes.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="../css/styles.css">
+    <link rel="icon" href="../images/favicon.svg" type="image/svg+xml">
 </head>
 
-<body>
+<body class="docs-body">
     <nav class="navbar scrolled" id="navbar">
         <div class="container navbar-content">
-            <a href="../index.html" class="logo">
+            <a href="/" class="logo">
                 <div class="logo-icon">
-                    <img src="../images/MJB%20logo.svg" alt="MJB Logo" />
+                    <img src="../images/MJB%20logo.svg" alt="Modern Job Board" />
                 </div>
             </a>
             <div class="nav-links desktop-only">
-                <a href="../index.html#features">Features</a>
-                <a href="index.html" class="active">Docs</a>
-                <a href="/jobs/" data-demo-path="/jobs/" target="_blank" rel="noopener noreferrer">Live Demo</a>
-                <a href="../index.html#pricing" class="btn btn-primary btn-sm">Get Started</a>
+                <a href="/#features">Features</a>
+                <a href="/docs/" class="active" aria-current="page">Docs</a>
+                <a href="/#comparison">Compare</a>
+                <a href="/#developers">Developers</a>
+                <a href="/#pricing">Pricing</a>
+                <a href="/jobs/" data-demo-path="/jobs/" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm">Live Demo</a>
+                <a href="/#pricing" class="btn btn-primary btn-sm">Get Started Free</a>
             </div>
         </div>
     </nav>
 
     <main class="docs-page">
-        <section class="section">
-            <div class="container docs-container">
-                <header class="docs-header">
-                    <span class="eyebrow">Documentation</span>
-                    <h1>Modern Job Board v0.9.0-beta.1</h1>
-                    <p>Install the plugin, create frontend pages, and extend it with blocks, shortcodes, REST, and webhooks.</p>
-                </header>
-
-                <div class="docs-grid">
-                    <article class="docs-card">
-                        <h2>Quick start</h2>
-                        <ol class="docs-list">
-                            <li>Upload and activate the plugin.</li>
-                            <li>Open <strong>Modern Job Board → Setup</strong> and create missing pages.</li>
-                            <li>Configure <strong>Settings</strong> for listings, security, and integrations.</li>
-                            <li>Post a test job and submit a test application.</li>
-                        </ol>
-                    </article>
-
-                    <article class="docs-card">
-                        <h2>Shortcodes & blocks</h2>
-                        <ul class="docs-list">
-                            <li><code>[mjb_jobs]</code> — searchable listings</li>
-                            <li><code>[mjb_job_form]</code> — employer submission form</li>
-                            <li><code>[mjb_dashboard]</code> — employer dashboard</li>
-                            <li><code>[mjb_candidate_dashboard]</code> — candidate profile</li>
-                            <li><code>[mjb_employer_registration]</code> / <code>[mjb_candidate_registration]</code></li>
-                        </ul>
-                        <p>All shortcodes are also available as Gutenberg blocks under <strong>Modern Job Board</strong>.</p>
-                    </article>
-
-                    <article class="docs-card">
-                        <h2>REST API</h2>
-                        <p>Public search:</p>
-                        <pre class="docs-code">GET /wp-json/mjb/v1/jobs/search/in/remote/category/engineering/type/full-time/</pre>
-                        <p>Authenticated employer/candidate endpoints live under <code>/wp-json/mjb/v2/</code>. REST API access requires the <strong>Business</strong> plan.</p>
-                    </article>
-
-                    <article class="docs-card">
-                        <h2>Local demo</h2>
-                        <p>Sync and seed the bundled local WordPress install:</p>
-                        <pre class="docs-code">.\bin\sync-local-test.ps1
-php bin\seed-demo.php "C:\Users\marti\4Mation Digital\mjb-local-test"</pre>
-                        <p>Then open the demo site:</p>
-                        <p><a href="/jobs/" data-demo-path="/jobs/" class="btn btn-outline btn-sm">Browse demo jobs</a></p>
-                    </article>
-
-                    <article class="docs-card">
-                        <h2>Feeds & webhooks</h2>
-                        <ul class="docs-list">
-                            <li>XML feed: <code>/feed/job-listings</code></li>
-                            <li>Webhook events: <code>application.submitted</code>, <code>application.status_updated</code>, <code>job.submitted</code></li>
-                            <li>Optional HMAC signing via <code>X-MJB-Signature</code></li>
-                        </ul>
-                    </article>
-
-                    <article class="docs-card">
-                        <h2>Plans &amp; licensing</h2>
-                        <p>Modern Job Board is a <strong>proprietary freemium</strong> plugin. Start free, then upgrade for monetization, imports, and API features — or choose Complete Site for a done-for-you build.</p>
-                        <ul class="docs-list">
-                            <li><strong>Free</strong> — up to 10 active jobs, core board, community support</li>
-                            <li><strong>Pro</strong> — unlimited jobs, WooCommerce, custom fields, import/export</li>
-                            <li><strong>Business</strong> — REST API, XML feeds, webhooks, priority support</li>
-                            <li><strong>Complete Site</strong> — full site build + Business included for year one</li>
-                        </ul>
-                        <p><a href="../index.html#pricing" class="btn btn-outline btn-sm">View pricing</a></p>
-                    </article>
-                </div>
+        <!-- Same content-hero pattern as other MJB content pages -->
+        <section class="mjb-content-hero alignfull docs-hero" id="top">
+            <div class="mjb-content-hero__inner container">
+                <h1 class="mjb-content-hero__title">Modern Job Board documentation</h1>
+                <p class="mjb-content-hero__intro">Install the plugin, create frontend pages, and extend it with shortcodes, REST, feeds, and webhooks.</p>
             </div>
         </section>
+
+        <div class="docs-shell">
+            <aside class="docs-sidebar" aria-label="Documentation navigation">
+                <button type="button" class="docs-toc-toggle" id="docs-toc-toggle" aria-expanded="false" aria-controls="docs-sidebar-nav">
+                    On this page
+                    <span aria-hidden="true">▾</span>
+                </button>
+                <nav class="docs-sidebar-nav" id="docs-sidebar-nav">
+                    <p class="docs-sidebar-title">Overview</p>
+                    <ul class="docs-toc">
+                        <li><a href="#introduction">Introduction</a></li>
+                        <li><a href="#conventions">Conventions</a></li>
+                        <li><a href="#getting-started">Getting started</a></li>
+                        <li><a href="#shortcodes">Shortcodes &amp; blocks</a></li>
+                        <li><a href="#licensing">Licensing &amp; plans</a></li>
+                        <li><a href="#storage">Storage &amp; deploy</a></li>
+                    </ul>
+                    <p class="docs-sidebar-title">REST API</p>
+                    <ul class="docs-toc">
+                        <li><a href="#rest-overview">Overview</a></li>
+                        <li><a href="#authentication">Authentication</a></li>
+                        <li><a href="#errors">Errors</a></li>
+                        <li><a href="#v1-jobs"><span class="docs-method-tag">GET</span> Jobs (v1)</a></li>
+                        <li>
+                            <a href="#v2-applications"><span class="docs-method-tag">GET</span> Applications</a>
+                            <ul class="docs-toc docs-toc--nested">
+                                <li><a href="#v2-application-update"><span class="docs-method-tag">PATCH</span> Status</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#v2-analytics"><span class="docs-method-tag">GET</span> Analytics</a></li>
+                        <li>
+                            <a href="#v2-candidate"><span class="docs-method-tag">GET</span> Candidate profile</a>
+                            <ul class="docs-toc docs-toc--nested">
+                                <li><a href="#v2-candidate-update"><span class="docs-method-tag">PATCH</span> Update</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <p class="docs-sidebar-title">Integrations</p>
+                    <ul class="docs-toc">
+                        <li><a href="#xml-feed">XML job feed</a></li>
+                        <li><a href="#webhooks">Webhooks</a></li>
+                        <li><a href="#hooks">PHP hooks</a></li>
+                    </ul>
+                    <p class="docs-sidebar-title">More</p>
+                    <ul class="docs-toc">
+                        <li><a href="#development">Development</a></li>
+                    </ul>
+                </nav>
+            </aside>
+
+            <div class="docs-main">
+                <!-- Introduction -->
+                <section class="docs-section" id="introduction">
+                    <h2>Introduction</h2>
+                    <p>Modern Job Board is a proprietary freemium WordPress plugin for self-hosted job boards. Listing data lives in your WordPress database; employers and candidates use frontend shortcodes (or blocks); optional monetization uses WooCommerce on paid plans.</p>
+                    <p><strong>Current public line:</strong> <code>0.9.0-beta.9</code> (pre-stable). Treat as beta until <code>1.0.0</code>.</p>
+                    <div class="docs-note">
+                        <strong>Plan gating.</strong> REST API, XML feed, and webhooks require the <strong>Business</strong> plan (or Complete Site). WooCommerce monetization, custom fields, and import tools require <strong>Pro</strong> or higher. See <a href="#licensing">Licensing</a>.
+                    </div>
+                </section>
+
+                <section class="docs-section" id="conventions">
+                    <h2>General conventions</h2>
+                    <h3>URLs</h3>
+                    <p>WordPress REST routes are under your site origin. Replace <code>{site}</code> with your home URL (no trailing slash in examples below means you should not double-slash).</p>
+                    <pre class="docs-code">{site}/wp-json/mjb/v1/…
+{site}/wp-json/mjb/v2/…
+{site}/feed/job-listings</pre>
+                    <p>Pretty job search URLs use the board base (default <code>/jobs/</code>). REST v1 also accepts a path-style search route that mirrors those filters.</p>
+                    <h3>JSON</h3>
+                    <p>Request and response bodies use JSON UTF-8. Authenticated v2 routes accept application passwords, cookies (same-origin), or other WordPress REST authentication plugins.</p>
+                    <h3>Pagination headers</h3>
+                    <p>List endpoints return:</p>
+                    <ul>
+                        <li><code>X-WP-Total</code>: total matching records</li>
+                        <li><code>X-WP-TotalPages</code>: total pages</li>
+                        <li><code>Link</code> (v1 jobs): <code>rel="canonical"</code> pretty search URL</li>
+                    </ul>
+                </section>
+
+                <!-- Getting started -->
+                <section class="docs-section" id="getting-started">
+                    <h2>Getting started</h2>
+                    <h3>Requirements</h3>
+                    <ul>
+                        <li>WordPress 6.4+</li>
+                        <li>PHP 7.4+</li>
+                        <li>Optional: WooCommerce (Pro+) for pay-per-post, credits, paid CV access</li>
+                    </ul>
+                    <h3>Installation</h3>
+                    <ol>
+                        <li>Upload <code>modern-job-board</code> to <code>wp-content/plugins/</code> and activate it.</li>
+                        <li>Open <strong>Job Board → Setup</strong> and create missing pages.</li>
+                        <li>Configure <strong>Settings</strong> (listing duration, reCAPTCHA, webhooks, license key).</li>
+                        <li>Post a test job and submit a test application.</li>
+                    </ol>
+                    <h3>Recommended frontend pages</h3>
+                    <div class="docs-table-wrap">
+                        <table class="docs-table">
+                            <thead>
+                                <tr>
+                                    <th>Page</th>
+                                    <th>Shortcode</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Jobs search</td>
+                                    <td><code>[[mjb_jobs]]</code></td>
+                                </tr>
+                                <tr>
+                                    <td>Post a job</td>
+                                    <td><code>[[mjb_job_form]]</code></td>
+                                </tr>
+                                <tr>
+                                    <td>Employer dashboard</td>
+                                    <td><code>[[mjb_dashboard]]</code></td>
+                                </tr>
+                                <tr>
+                                    <td>Candidate dashboard</td>
+                                    <td><code>[[mjb_candidate_dashboard]]</code></td>
+                                </tr>
+                                <tr>
+                                    <td>Employer / candidate login</td>
+                                    <td><code>[[mjb_employer_login]]</code> / <code>[[mjb_candidate_login]]</code></td>
+                                </tr>
+                                <tr>
+                                    <td>Registration</td>
+                                    <td><code>[[mjb_employer_registration]]</code> / <code>[[mjb_candidate_registration]]</code></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="docs-note">
+                        <strong>Docs samples.</strong> Shortcodes on this page use double brackets <code>[[mjb_*]]</code> so WordPress does not execute them when the page is rendered in WP.
+                    </div>
+                </section>
+
+                <section class="docs-section" id="shortcodes">
+                    <h2>Shortcodes &amp; blocks</h2>
+                    <p>Every shortcode is also available as a Gutenberg block under <strong>Modern Job Board</strong> in the block inserter.</p>
+                    <div class="docs-table-wrap">
+                        <table class="docs-table">
+                            <thead>
+                                <tr>
+                                    <th>Shortcode</th>
+                                    <th>Description</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><code>[[mjb_jobs]]</code></td>
+                                    <td>AJAX job search and listings</td>
+                                </tr>
+                                <tr>
+                                    <td><code>[[mjb_job_form]]</code></td>
+                                    <td>Frontend job submission / edit</td>
+                                </tr>
+                                <tr>
+                                    <td><code>[[mjb_dashboard]]</code></td>
+                                    <td>Employer jobs and applications</td>
+                                </tr>
+                                <tr>
+                                    <td><code>[[mjb_candidate_dashboard]]</code></td>
+                                    <td>Candidate profile, resume, applications</td>
+                                </tr>
+                                <tr>
+                                    <td><code>[[mjb_employer_login]]</code></td>
+                                    <td>Employer login + link to register</td>
+                                </tr>
+                                <tr>
+                                    <td><code>[[mjb_candidate_login]]</code></td>
+                                    <td>Job seeker login + link to register</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+
+                <section class="docs-section" id="licensing">
+                    <h2>Licensing &amp; plans</h2>
+                    <p>Activate a key under <strong>Job Board → Settings → License &amp; plan</strong>, or force a plan in <code>wp-config.php</code>:</p>
+                    <pre class="docs-code">define('MJB_LICENSE_PLAN', 'business'); // free | pro | business | complete_site</pre>
+                    <div class="docs-table-wrap">
+                        <table class="docs-table">
+                            <thead>
+                                <tr>
+                                    <th>Plan</th>
+                                    <th>Highlights</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Free</td>
+                                    <td>Core board; max <strong>10</strong> published jobs</td>
+                                </tr>
+                                <tr>
+                                    <td>Pro</td>
+                                    <td>Unlimited jobs, WooCommerce, custom fields, import/export</td>
+                                </tr>
+                                <tr>
+                                    <td>Business</td>
+                                    <td>Everything in Pro + REST, XML feed, webhooks</td>
+                                </tr>
+                                <tr>
+                                    <td>Complete Site</td>
+                                    <td>Done-for-you build; Business features included for year one</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <p>Offline key format: <code>MJB-{PLAN}-{YYYYMMDD|00000000}-{checksum}</code>. License checkout is <strong>gateway-agnostic</strong>: with WooCommerce you can use <strong>any payment gateway that supports WooCommerce</strong> (for example PayPal, Stripe, Square, Mollie, Razorpay, or regional options such as Payfast/Yoco where available). MJB does not lock you to a single processor. Operator notes: plugin <code>docs/purchase.md</code>.</p>
+                </section>
+
+                <section class="docs-section" id="storage">
+                    <h2>Storage &amp; deploy</h2>
+                    <p>User files are stored under <code>wp-content/</code> so plugin updates do not delete them:</p>
+                    <ul>
+                        <li><code>wp-content/mjb-private/</code>: resumes (must not be web-accessible)</li>
+                        <li><code>wp-content/mjb-brand/</code>: logos and photos (public hashed URLs)</li>
+                    </ul>
+                    <p>On <strong>nginx</strong>, deny direct access (Apache/IIS get denial files from the plugin automatically):</p>
+                    <pre class="docs-code">location ~* /wp-content/mjb-private/ {
+    deny all;
+    return 403;
+}</pre>
+                    <p>Full cache, backup, and Local WP notes: plugin <code>docs/deploy.md</code>.</p>
+                </section>
+
+                <!-- REST -->
+                <section class="docs-section" id="rest-overview">
+                    <h2>REST API overview</h2>
+                    <p>Two namespaces ship with the plugin when the active plan allows REST (<strong>Business</strong>+):</p>
+                    <ul>
+                        <li><strong>v1</strong>: public job search (no authentication)</li>
+                        <li><strong>v2</strong>: authenticated employer and candidate operations</li>
+                    </ul>
+                    <p>Base path: <code>/wp-json/mjb/</code></p>
+                </section>
+
+                <section class="docs-section" id="authentication">
+                    <h2>Authentication</h2>
+                    <p>v2 endpoints require a logged-in WordPress user with the correct role:</p>
+                    <ul>
+                        <li><strong>Employer</strong> routes: role <code>employer</code> or capability <code>manage_options</code></li>
+                        <li><strong>Candidate</strong> routes: role <code>candidate</code> or <code>manage_options</code></li>
+                    </ul>
+                    <p>Recommended machine access: <a href="https://make.wordpress.org/core/2020/11/05/application-passwords-integration-guide/" target="_blank" rel="noopener noreferrer">Application Passwords</a> over HTTPS.</p>
+                    <p class="docs-code-label">Example (curl + application password)</p>
+                    <pre class="docs-code">curl -u "USERNAME:APPLICATION_PASSWORD" \
+  "https://example.com/wp-json/mjb/v2/applications?per_page=20"</pre>
+                    <div class="docs-note">
+                        <strong>Ownership.</strong> Employers only see applications for jobs they authored. An employer with zero jobs receives an empty list (never an unscoped dump of all applications). Admins may list all applications.
+                    </div>
+                </section>
+
+                <section class="docs-section" id="errors">
+                    <h2>Errors</h2>
+                    <p>WordPress REST errors return JSON with <code>code</code>, <code>message</code>, and <code>data.status</code>. Common MJB codes:</p>
+                    <div class="docs-table-wrap">
+                        <table class="docs-table">
+                            <thead>
+                                <tr>
+                                    <th>HTTP</th>
+                                    <th>Code</th>
+                                    <th>Meaning</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>401</td>
+                                    <td><code>mjb_rest_auth_required</code></td>
+                                    <td>Not logged in</td>
+                                </tr>
+                                <tr>
+                                    <td>403</td>
+                                    <td><code>mjb_rest_forbidden</code></td>
+                                    <td>Wrong role or no access to job/application</td>
+                                </tr>
+                                <tr>
+                                    <td>400</td>
+                                    <td><code>mjb_invalid_status</code> / <code>mjb_missing_fields</code></td>
+                                    <td>Bad input</td>
+                                </tr>
+                                <tr>
+                                    <td>500</td>
+                                    <td><code>mjb_update_failed</code></td>
+                                    <td>Update could not be saved</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+
+                <!-- v1 jobs -->
+                <section class="docs-section" id="v1-jobs">
+                    <h2>Jobs (v1)</h2>
+                    <p>Public job listings. No authentication. Max <code>per_page</code> is 100.</p>
+
+                    <article class="docs-endpoint" id="v1-jobs-list">
+                        <div class="docs-endpoint-title">
+                            <span class="docs-method docs-method--get">GET</span>
+                            <h3>/wp-json/mjb/v1/jobs</h3>
+                        </div>
+                        <p>Query-string filters for keyword, location, category, and type.</p>
+                        <p class="docs-code-label">HTTP request</p>
+                        <pre class="docs-code">GET /wp-json/mjb/v1/jobs?search_keywords=engineer&amp;search_location=remote&amp;per_page=10&amp;page=1</pre>
+                        <div class="docs-table-wrap">
+                            <table class="docs-table">
+                                <thead>
+                                    <tr>
+                                        <th>Parameter</th>
+                                        <th></th>
+                                        <th>Description</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><code>per_page</code></td>
+                                        <td><span class="docs-opt">optional</span></td>
+                                        <td>Default <code>10</code>, max <code>100</code></td>
+                                    </tr>
+                                    <tr>
+                                        <td><code>page</code></td>
+                                        <td><span class="docs-opt">optional</span></td>
+                                        <td>Page number (1-based)</td>
+                                    </tr>
+                                    <tr>
+                                        <td><code>search_keywords</code></td>
+                                        <td><span class="docs-opt">optional</span></td>
+                                        <td>Keyword search</td>
+                                    </tr>
+                                    <tr>
+                                        <td><code>search_location</code></td>
+                                        <td><span class="docs-opt">optional</span></td>
+                                        <td>Location filter</td>
+                                    </tr>
+                                    <tr>
+                                        <td><code>search_category</code></td>
+                                        <td><span class="docs-opt">optional</span></td>
+                                        <td>Job category slug or name</td>
+                                    </tr>
+                                    <tr>
+                                        <td><code>search_type</code></td>
+                                        <td><span class="docs-opt">optional</span></td>
+                                        <td>Job type (e.g. full-time)</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <p class="docs-code-label">Example response (truncated)</p>
+                        <pre class="docs-code">[
+  {
+    "id": 42,
+    "title": "Senior Web Developer",
+    "link": "https://example.com/jobs/senior-web-developer/",
+    "date": "2026-07-20 10:00:00",
+    "featured": false,
+    "company": "Acme Corp",
+    "location": "Remote",
+    "type": "Full-time",
+    "category": "Engineering",
+    "excerpt": "Build modern job board experiences…"
+  }
+]</pre>
+                    </article>
+
+                    <article class="docs-endpoint" id="v1-jobs-search-path">
+                        <div class="docs-endpoint-title">
+                            <span class="docs-method docs-method--get">GET</span>
+                            <h3>/wp-json/mjb/v1/jobs/search/{search_path}</h3>
+                        </div>
+                        <p>Path-style search that mirrors pretty frontend URLs (location, category, type, keyword segments).</p>
+                        <p class="docs-code-label">Example</p>
+                        <pre class="docs-code">GET /wp-json/mjb/v1/jobs/search/in/remote/category/engineering/type/full-time/</pre>
+                        <p>Also available: <code>GET /wp-json/mjb/v1/jobs/search</code> without a path (same as listing with query params).</p>
+                    </article>
+                </section>
+
+                <!-- v2 applications -->
+                <section class="docs-section" id="v2-applications">
+                    <h2>Applications (v2)</h2>
+                    <p>Employer-scoped application list. Candidate PII and resume URLs are omitted when paid CV access is enabled and the employer has not unlocked the application.</p>
+
+                    <article class="docs-endpoint">
+                        <div class="docs-endpoint-title">
+                            <span class="docs-method docs-method--get">GET</span>
+                            <h3>/wp-json/mjb/v2/applications</h3>
+                        </div>
+                        <p class="docs-code-label">curl</p>
+                        <pre class="docs-code">curl -u "employer:xxxx xxxx xxxx xxxx" \
+  "https://example.com/wp-json/mjb/v2/applications?job_id=42&amp;status=new&amp;per_page=20"</pre>
+                        <div class="docs-table-wrap">
+                            <table class="docs-table">
+                                <thead>
+                                    <tr>
+                                        <th>Parameter</th>
+                                        <th></th>
+                                        <th>Description</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><code>job_id</code></td>
+                                        <td><span class="docs-opt">optional</span></td>
+                                        <td>Limit to one job (must be owned by employer)</td>
+                                    </tr>
+                                    <tr>
+                                        <td><code>status</code></td>
+                                        <td><span class="docs-opt">optional</span></td>
+                                        <td>Workflow status key</td>
+                                    </tr>
+                                    <tr>
+                                        <td><code>page</code></td>
+                                        <td><span class="docs-opt">optional</span></td>
+                                        <td>Default <code>1</code></td>
+                                    </tr>
+                                    <tr>
+                                        <td><code>per_page</code></td>
+                                        <td><span class="docs-opt">optional</span></td>
+                                        <td>Default <code>20</code>, max <code>100</code></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <p class="docs-code-label">Example response item</p>
+                        <pre class="docs-code">{
+  "id": 88,
+  "job_id": 42,
+  "job_title": "Senior Web Developer",
+  "status": "new",
+  "status_label": "New",
+  "date": "2026-07-21 14:30:00",
+  "cv_access": true,
+  "candidate_name": "Alex Example",
+  "candidate_email": "alex@example.com",
+  "message": "Excited to apply…",
+  "resume_url": "https://example.com/?mjb_download=application&amp;mjb_id=88&amp;mjb_nonce=…"
+}</pre>
+                    </article>
+
+                    <article class="docs-endpoint" id="v2-application-update">
+                        <div class="docs-endpoint-title">
+                            <span class="docs-method docs-method--patch">PATCH</span>
+                            <h3>/wp-json/mjb/v2/applications/{id}</h3>
+                        </div>
+                        <p>Update workflow status. Caller must be allowed to manage that application (job owner or admin).</p>
+                        <p class="docs-code-label">curl</p>
+                        <pre class="docs-code">curl -X POST -u "employer:xxxx" \
+  -H "Content-Type: application/json" \
+  -H "X-HTTP-Method-Override: PATCH" \
+  -d '{"status":"reviewed"}' \
+  "https://example.com/wp-json/mjb/v2/applications/88"</pre>
+                        <div class="docs-table-wrap">
+                            <table class="docs-table">
+                                <thead>
+                                    <tr>
+                                        <th>Parameter</th>
+                                        <th></th>
+                                        <th>Description</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><code>id</code></td>
+                                        <td><span class="docs-req">required</span></td>
+                                        <td>Application post ID (path)</td>
+                                    </tr>
+                                    <tr>
+                                        <td><code>status</code></td>
+                                        <td><span class="docs-req">required</span></td>
+                                        <td>Valid workflow status key</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </article>
+                </section>
+
+                <section class="docs-section" id="v2-analytics">
+                    <h2>Analytics (v2)</h2>
+                    <article class="docs-endpoint">
+                        <div class="docs-endpoint-title">
+                            <span class="docs-method docs-method--get">GET</span>
+                            <h3>/wp-json/mjb/v2/analytics</h3>
+                        </div>
+                        <p>Employer performance summary: totals and per-job stats for the authenticated employer.</p>
+                        <pre class="docs-code">curl -u "employer:xxxx" "https://example.com/wp-json/mjb/v2/analytics"</pre>
+                        <p class="docs-code-label">Shape</p>
+                        <pre class="docs-code">{
+  "totals": { "jobs": 3, "views": 120, "applications": 14, "conversion_rate": "11.7" },
+  "jobs": [ /* per-job rows */ ]
+}</pre>
+                    </article>
+                </section>
+
+                <section class="docs-section" id="v2-candidate">
+                    <h2>Candidate profile (v2)</h2>
+                    <article class="docs-endpoint">
+                        <div class="docs-endpoint-title">
+                            <span class="docs-method docs-method--get">GET</span>
+                            <h3>/wp-json/mjb/v2/candidate/profile</h3>
+                        </div>
+                        <p>Returns the authenticated candidate’s profile (never another user).</p>
+                        <pre class="docs-code">{
+  "id": 15,
+  "email": "seeker@example.com",
+  "first_name": "Sam",
+  "last_name": "Lee",
+  "headline": "Product Designer",
+  "resume_id": 90,
+  "resume_url": "https://example.com/?mjb_download=resume&amp;…"
+}</pre>
+                    </article>
+
+                    <article class="docs-endpoint" id="v2-candidate-update">
+                        <div class="docs-endpoint-title">
+                            <span class="docs-method docs-method--patch">PATCH</span>
+                            <h3>/wp-json/mjb/v2/candidate/profile</h3>
+                        </div>
+                        <p>Update one or more of <code>first_name</code>, <code>last_name</code>, <code>headline</code>. At least one field is required.</p>
+                        <pre class="docs-code">curl -X POST -u "candidate:xxxx" \
+  -H "Content-Type: application/json" \
+  -H "X-HTTP-Method-Override: PATCH" \
+  -d '{"headline":"Senior Product Designer"}' \
+  "https://example.com/wp-json/mjb/v2/candidate/profile"</pre>
+                    </article>
+                </section>
+
+                <!-- Feed & webhooks -->
+                <section class="docs-section" id="xml-feed">
+                    <h2>XML job feed</h2>
+                    <p>Business plan. RSS 2.0 feed of published jobs (capped, currently 100 items).</p>
+                    <pre class="docs-code">GET {site}/feed/job-listings</pre>
+                    <p>Items include title, link, description, company, location, type, and MJB namespaced fields where present. Use for aggregators and partner syndication.</p>
+                    <div class="docs-note">
+                        <strong>Importing feeds.</strong> Admin tools can pull remote XML URLs. The plugin blocks private/loopback hosts (SSRF protection). Prefer HTTPS public feeds only.
+                    </div>
+                </section>
+
+                <section class="docs-section" id="webhooks">
+                    <h2>Webhooks</h2>
+                    <p>Configure endpoint URLs (one per line) and an optional HMAC secret under <strong>Settings → Integrations</strong>. Business plan.</p>
+                    <h3>Events</h3>
+                    <div class="docs-table-wrap">
+                        <table class="docs-table">
+                            <thead>
+                                <tr>
+                                    <th>Event</th>
+                                    <th>When</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><code>application.submitted</code></td>
+                                    <td>New application created</td>
+                                </tr>
+                                <tr>
+                                    <td><code>application.status_updated</code></td>
+                                    <td>Workflow status change</td>
+                                </tr>
+                                <tr>
+                                    <td><code>job.submitted</code></td>
+                                    <td>Frontend job submission</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <h3>Payload envelope</h3>
+                    <pre class="docs-code">{
+  "event": "application.submitted",
+  "timestamp": 1722000000,
+  "site": "https://example.com/",
+  "data": { /* event-specific */ }
+}</pre>
+                    <h3>Signature</h3>
+                    <p>If a webhook secret is set, requests include:</p>
+                    <pre class="docs-code">X-MJB-Signature: {hmac_sha256_hex_of_raw_body}</pre>
+                    <p>Verify with the same secret on the raw request body. Failed deliveries retry with exponential backoff (queued).</p>
+                </section>
+
+                <section class="docs-section" id="hooks">
+                    <h2>PHP hooks</h2>
+                    <p>Selected extension points for theme and custom plugin code:</p>
+                    <div class="docs-table-wrap">
+                        <table class="docs-table">
+                            <thead>
+                                <tr>
+                                    <th>Hook</th>
+                                    <th>Type</th>
+                                    <th>Purpose</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><code>mjb_job_listing_query_args</code></td>
+                                    <td>filter</td>
+                                    <td>Adjust job listing queries</td>
+                                </tr>
+                                <tr>
+                                    <td><code>mjb_license_plan</code></td>
+                                    <td>filter</td>
+                                    <td>Override active plan slug</td>
+                                </tr>
+                                <tr>
+                                    <td><code>mjb_license_can</code></td>
+                                    <td>filter</td>
+                                    <td>Override feature capability checks</td>
+                                </tr>
+                                <tr>
+                                    <td><code>mjb_before_employer_dashboard</code></td>
+                                    <td>action</td>
+                                    <td>Before employer dashboard render</td>
+                                </tr>
+                                <tr>
+                                    <td><code>mjb_application_submitted</code></td>
+                                    <td>action</td>
+                                    <td>After application saved</td>
+                                </tr>
+                                <tr>
+                                    <td><code>mjb_job_submitted</code></td>
+                                    <td>action</td>
+                                    <td>After frontend job post</td>
+                                </tr>
+                                <tr>
+                                    <td><code>mjb_webhook_payload</code></td>
+                                    <td>filter</td>
+                                    <td>Modify outbound webhook body</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+
+                <section class="docs-section" id="development">
+                    <h2>Development</h2>
+                    <p>From the plugin repository root:</p>
+                    <pre class="docs-code">composer install
+composer test
+composer phpcs
+composer make-pot</pre>
+                    <p>Local demo sync (Windows):</p>
+                    <pre class="docs-code">composer sync-local
+composer seed-demo</pre>
+                    <p>In-repo operator docs (not all mirrored on this page): <code>docs/deploy.md</code>, <code>docs/purchase.md</code>, <code>docs/security-repass.md</code>, <code>docs/release-checklist.md</code>.</p>
+                    <p><a href="/jobs/" data-demo-path="/jobs/" class="btn btn-primary btn-sm" target="_blank" rel="noopener noreferrer">Open live demo</a>
+                        <a href="/#pricing" class="btn btn-outline btn-sm">View pricing</a></p>
+                </section>
+            </div>
+        </div>
     </main>
 
     <footer>
@@ -111,13 +703,21 @@ php bin\seed-demo.php "C:\Users\marti\4Mation Digital\mjb-local-test"</pre>
                 </div>
             </div>
             <div class="footer-links">
-                <a href="../index.html#pricing">Pricing</a>
-                <a href="index.html">Documentation</a>
+                <a href="/#pricing">Pricing</a>
+                <a href="/docs/">Documentation</a>
                 <a href="https://martinorton.com">Author</a>
             </div>
-            <div class="footer-copy">Copyright © 2026 Modern Job Board.</div>
+            <div class="footer-copy">Copyright © 2026 Modern Job Board. Developed by <a href="https://martinorton.com">Martin Orton</a>.</div>
         </div>
     </footer>
+
+    <button id="back-to-top" class="back-to-top" aria-label="Back to top">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 19V5" />
+            <path d="m5 12 7-7 7 7" />
+        </svg>
+    </button>
 
     <script src="../js/script.js"></script>
 </body>
